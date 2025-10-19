@@ -1137,12 +1137,13 @@
         // chữ của thư bạn muốn gửi
         let indexTextContent = 0;
         let textLetterContent = document.querySelector('.contentLetter');
-    
+        textLetterContent.innerHTML = "<img src='./image/hân.jpg' alt='Ảnh Hân' width='200'><br>";
+
         const textLetterP = "Hôm nay là ngày 20/10 anh chúc em luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống nhá. Hãy luôn giữ mãi nụ cười trên môi nhá và đừng suy nghĩ nhiều về những thứ không đáng nha";
         let timoutTextLetterContent;
         function textCharLetterContent() {
             if (indexTextContent < textLetterP.length) {
-                textLetterContent.textContent += textLetterP[indexTextContent];
+               textLetterContent.innerHTML += textLetterP[indexTextContent];
                 indexTextContent++;
                 setTimeout(indexTextContent, 1);
             }
